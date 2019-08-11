@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'dashboard.dart';
-
 
 // void main() {
 //   runApp();
@@ -19,8 +19,6 @@ import 'dashboard.dart';
 //   }
 // }
 
-
-
 class MyApp extends StatelessWidget {
   final appTitle = 'Dashboard';
 
@@ -28,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        '/first':(context)=>MyApp(),
+        '/first': (context) => MyApp(),
       },
       debugShowCheckedModeBanner: false,
       title: appTitle,
@@ -45,7 +43,20 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      appBar: AppBar(
+        title: Text(title),
+        actions: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(right: 5.0),
+            child:IconButton(
+            icon: Icon(
+              FontAwesomeIcons.solidUserCircle,
+              size: 35.0,
+            ),
+            onPressed: () {},
+          ),)
+        ],
+      ),
       body: Dashboard(),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
@@ -56,36 +67,73 @@ class MyHomePage extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             UserAccountsDrawerHeader(
-              currentAccountPicture: Icon(Icons.account_circle, size:75.0),
+              currentAccountPicture: Icon(Icons.account_circle, size: 75.0),
               accountEmail: Text("pamuditha@gmail.com"),
               accountName: Text("Pamuditha"),
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
-              
             ),
             Card(
-            child: ListTile(
-              leading: Icon(Icons.add_location),
-              title: Text('Location'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),),
+              child: ListTile(
+                leading: Icon(Icons.add_location),
+                title: Text('Location'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+            ),
             Card(
-              child:ListTile(
-              leading: Icon(Icons.add_shopping_cart),
-              title: Text('Shopping'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),)
+              child: ListTile(
+                leading: Icon(Icons.add_shopping_cart),
+                title: Text('Shopping'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.add_location),
+                title: Text('Location'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.add_location),
+                title: Text('Location'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.add_location),
+                title: Text('Location'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+            ),
           ],
         ),
       ),
