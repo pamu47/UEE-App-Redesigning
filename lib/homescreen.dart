@@ -45,17 +45,6 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
-        actions: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(right: 5.0),
-            child:IconButton(
-            icon: Icon(
-              FontAwesomeIcons.solidUserCircle,
-              size: 35.0,
-            ),
-            onPressed: () {},
-          ),)
-        ],
       ),
       body: Dashboard(),
       drawer: Drawer(
@@ -76,8 +65,8 @@ class MyHomePage extends StatelessWidget {
             ),
             Card(
               child: ListTile(
-                leading: Icon(Icons.add_location),
-                title: Text('Location'),
+                leading: Icon(Icons.dashboard),
+                title: Text('Dashboard'),
                 onTap: () {
                   // Update the state of the app
                   // ...
@@ -88,8 +77,20 @@ class MyHomePage extends StatelessWidget {
             ),
             Card(
               child: ListTile(
-                leading: Icon(Icons.add_shopping_cart),
-                title: Text('Shopping'),
+                leading: Icon(FontAwesomeIcons.hospital),
+                title: Text('Departments'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+                        Card(
+              child: ListTile(
+                leading: Icon(FontAwesomeIcons.userNurse),
+                title: Text('Staff'),
                 onTap: () {
                   // Update the state of the app
                   // ...
@@ -100,8 +101,8 @@ class MyHomePage extends StatelessWidget {
             ),
             Card(
               child: ListTile(
-                leading: Icon(Icons.add_location),
-                title: Text('Location'),
+                leading: Icon(FontAwesomeIcons.procedures),
+                title: Text('Patients'),
                 onTap: () {
                   // Update the state of the app
                   // ...
@@ -112,8 +113,8 @@ class MyHomePage extends StatelessWidget {
             ),
             Card(
               child: ListTile(
-                leading: Icon(Icons.add_location),
-                title: Text('Location'),
+                leading: Icon(Icons.message),
+                title: Text('Messages'),
                 onTap: () {
                   // Update the state of the app
                   // ...
@@ -124,8 +125,8 @@ class MyHomePage extends StatelessWidget {
             ),
             Card(
               child: ListTile(
-                leading: Icon(Icons.add_location),
-                title: Text('Location'),
+                leading: Icon(Icons.notifications_active),
+                title: Text('Noticeboard'),
                 onTap: () {
                   // Update the state of the app
                   // ...
