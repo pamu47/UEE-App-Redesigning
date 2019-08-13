@@ -3,22 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'dashboard.dart';
 
-// void main() {
-//   runApp();
-// }
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       title: "Flutter Demo",
-//       theme: ThemeData(primaryColor: new Color(0xff622F74)),
-//       home: Dashboard(),
-//     );
-//   }
-// }
-
 class MyApp extends StatelessWidget {
   final appTitle = 'Dashboard';
 
