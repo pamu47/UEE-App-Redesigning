@@ -2,10 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:hospital_mgt/homescreen.dart';
+import 'package:hospital_mgt/patients.dart';
 
 void main() => runApp(new MaterialApp(
       routes: {
-        '/home': (context)=>MyApp()
+        '/home': (context)=>MyApp(),
+        '/patients' : (context) =>Patients()
       },
       theme: ThemeData(primaryColor: Colors.white,accentColor: Colors.white),
       debugShowCheckedModeBanner: false,
@@ -23,7 +25,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds:5), ()=> Navigator.pushNamed(context, '/home'));
+    Timer(Duration(seconds:5), ()=> Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyApp())));
   }
 
   @override
