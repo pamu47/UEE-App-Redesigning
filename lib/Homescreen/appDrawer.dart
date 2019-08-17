@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hospital_mgt/dashboard.dart';
-import 'package:hospital_mgt/homescreen.dart';
-import 'package:hospital_mgt/patients.dart';
+import 'package:hospital_mgt/Homescreen/dashboard.dart';
+import 'package:hospital_mgt/Homescreen/homescreen.dart';
+import 'package:hospital_mgt/PatientMgt/patients.dart';
 class AppDrawer extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

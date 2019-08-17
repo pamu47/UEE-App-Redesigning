@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hospital_mgt/patients.dart';
+import 'package:hospital_mgt/PatientMgt/patients.dart';
 
 class Dashboard extends StatefulWidget {
   @override
