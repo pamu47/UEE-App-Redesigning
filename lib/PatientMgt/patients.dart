@@ -14,6 +14,7 @@ class PatientState extends State<Patients>{
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
         title: Text("Patients"),
       ),
     );
