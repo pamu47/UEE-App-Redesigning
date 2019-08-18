@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hospital_mgt/Homescreen/appDrawer.dart';
-import 'package:hospital_mgt/PatientMgt/patients.dart';
 
 import 'dashboard.dart';
 
@@ -18,6 +16,7 @@ class MyHomePageState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.blue,
           title: Text("Dashboard"),
         ),
         body: Dashboard(),
