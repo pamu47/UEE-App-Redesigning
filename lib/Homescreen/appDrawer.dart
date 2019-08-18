@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hospital_mgt/Homescreen/dashboard.dart';
 import 'package:hospital_mgt/Homescreen/homescreen.dart';
 import 'package:hospital_mgt/PatientMgt/patients.dart';
 class AppDrawer extends StatelessWidget{
@@ -29,7 +28,7 @@ class AppDrawer extends StatelessWidget{
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => MyApp()));
-                  //Navigator.pop(context);
+                  Navigator.pop(context);
                 },
               ),
             ),
@@ -64,7 +63,7 @@ class AppDrawer extends StatelessWidget{
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Patients()));
-                  //Navigator.pop(context);
+                  Navigator.pop(context);
                 },
               ),
             ),
