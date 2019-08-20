@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:hospital_mgt/Homescreen/homescreen.dart';
+import 'package:hospital_mgt/Login/login.dart';
 import 'package:hospital_mgt/PatientMgt/patients.dart';
 
 void main() => runApp(MaterialApp(
@@ -28,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(Duration(seconds:5), (){
       //Navigator.pop(context);
       Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MyApp()));
+                      MaterialPageRoute(builder: (context) => Login()));
                       
     } );
   }
