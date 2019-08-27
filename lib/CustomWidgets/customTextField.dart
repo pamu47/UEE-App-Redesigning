@@ -1,64 +1,36 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatefulWidget {
+  String label, hint;
 
-  Icon fieldIcon;
-  String hintText;
-
-  CustomTextField(this.fieldIcon, this.hintText);
+  CustomTextField(this.label, this.hint);
 
   @override
   State<StatefulWidget> createState() {
-    return CustomTextFieldState(fieldIcon, hintText);
+    return CustomTextFieldState(label, hint);
   }
 }
 
 class CustomTextFieldState extends State<CustomTextField> {
-  Icon icon;
-  String hint;
-  CustomTextFieldState(this.icon, this.hint);
+  String labelText, hintText;
+
+  CustomTextFieldState(this.labelText, this.hintText);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 250,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12.0, right: 8.0, left: 8.0),
       child: Material(
-          elevation: 5.0,
-          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-          color: Colors.deepOrange,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: icon
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(10.0),
-                      bottomRight: Radius.circular(10.0)),
-                ),
-                width: 200,
-                height: 58,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: hint,
-                        fillColor: Colors.white,
-                        filled: true),
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          )),
+        borderRadius: BorderRadius.circular(5.0),
+        elevation: 5.0,
+        child: TextField(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            hintText: hintText,
+            labelText: labelText,
+          ),
+        ),
+      ),
     );
   }
 }
