@@ -10,7 +10,7 @@ void main() => runApp(MaterialApp(
         '/home': (context)=>MyApp(),
         '/patients' : (context) =>Patients()
       },
-      theme: ThemeData(primaryColor: Colors.white,accentColor: Colors.white),
+      theme: ThemeData(),
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     ));
@@ -24,7 +24,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Timer(Duration(seconds:5), (){
       //Navigator.pop(context);
