@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospital_mgt/CustomWidgets/customTextField.dart';
+import 'package:hospital_mgt/CustomWidgets/customLoginTextField.dart';
 import 'package:hospital_mgt/Homescreen/appDrawer.dart';
 import 'package:hospital_mgt/Homescreen/homescreen.dart';
 
@@ -59,7 +59,7 @@ class LoginState extends State<Login> {
                         SizedBox(
                           height: 160,
                         ),
-                        CustomTextField(
+                        CustomLoginTextField(
                             Icon(
                               Icons.person,
                               color: Colors.white,
@@ -68,7 +68,7 @@ class LoginState extends State<Login> {
                         SizedBox(
                           height: 20,
                         ),
-                        CustomTextField(
+                        CustomLoginTextField(
                             Icon(
                               Icons.lock,
                               color: Colors.white,
