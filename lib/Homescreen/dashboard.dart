@@ -14,11 +14,12 @@ class DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[300],
       body: StaggeredGridView.count(
         crossAxisCount: 2,
         crossAxisSpacing: 12,
         mainAxisSpacing: 12.0,
-        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        padding: EdgeInsets.all(20.0),
         children: <Widget>[
           myItems(FontAwesomeIcons.userMd, "Doctors", 0xffed622b, () {}),
           myItems(FontAwesomeIcons.procedures, "Patients", 0xff26cb3c, Patients()),
@@ -26,8 +27,8 @@ class DashboardState extends State<Dashboard> {
           myItems(Icons.message, "Messages", 0xff3399fe, () {}),
           myItems(Icons.payment, "Payments", 0xfff4c83f, () {}),
           myItems(FontAwesomeIcons.pills, "Medicine", 0xff622F74, () {}),
-          myItems(Icons.favorite, "Followers", 0xffad61f1, () {}),
-          myItems(Icons.message, "Messages", 0xff7297ff, () {}),
+          //myItems(Icons.favorite, "Followers", 0xffad61f1, () {}),
+          //myItems(Icons.message, "Messages", 0xff7297ff, () {}),
         ],
         staggeredTiles: [
           StaggeredTile.extent(2, 130.0),
@@ -36,8 +37,8 @@ class DashboardState extends State<Dashboard> {
           StaggeredTile.extent(1, 130.0),
           StaggeredTile.extent(1, 150.0),
           StaggeredTile.extent(1, 130.0),
-          StaggeredTile.extent(2, 200.0),
-          StaggeredTile.extent(2, 120.0),
+          //StaggeredTile.extent(2, 200.0),
+          //StaggeredTile.extent(2, 120.0),
         ],
       ),
     );
@@ -47,7 +48,7 @@ class DashboardState extends State<Dashboard> {
     return Material(
         color: Colors.white,
         elevation: 14.0,
-        shadowColor: Color(0x802196F3),
+        shadowColor: Colors.black,
         borderRadius: BorderRadius.circular(24.0),
         child: InkWell(
           onTap: () {
