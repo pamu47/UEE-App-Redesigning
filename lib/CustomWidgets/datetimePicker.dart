@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'dart:async';
 class DateTimePicker extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -53,12 +54,19 @@ class DateTimeState extends State<DateTimePicker> {
           ),
         ),
         Expanded(
-            child: FlatButton(
-          child: Icon(Icons.calendar_today),
+            child: Padding(
+              padding: const EdgeInsets.only(right:8.0,bottom: 8.0),
+              
+              child: Container(
+              
+                child: FlatButton(
+          child: Icon(FontAwesomeIcons.calendarAlt),
           onPressed: () {
-            _selectDate(context);
+                _selectDate(context);
           },
-        ))
+        ),
+              ),
+            ))
       ],
     );
   }

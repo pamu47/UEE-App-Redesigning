@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hospital_mgt/CustomWidgets/customTextField.dart';
+import 'package:hospital_mgt/CustomWidgets/datetimePicker.dart';
 
 class Patients extends StatefulWidget {
   @override
@@ -10,10 +11,22 @@ class Patients extends StatefulWidget {
 }
 
 class PatientState extends State<Patients> {
-  var gender = ['Gender','male', 'female'];
-  var bloodtypes = ['Blood Type','A+','A-','B+','B-','O+','O-','AB+','AB-'];
+  var gender = ['Gender', 'male', 'female'];
+  var bloodtypes = [
+    'Blood Type',
+    'A+',
+    'A-',
+    'B+',
+    'B-',
+    'O+',
+    'O-',
+    'AB+',
+    'AB-'
+  ];
   var currentBloodtype = 'Blood Type';
   var currentItemSelected = 'Gender';
+  var dateController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -23,9 +36,19 @@ class PatientState extends State<Patients> {
           backgroundColor: Colors.blueAccent,
           bottom: TabBar(
             tabs: [
-              Tab(icon: Icon(FontAwesomeIcons.procedures)),
-              Tab(icon: Icon(Icons.list)),
+              Tab(
+                icon: Icon(FontAwesomeIcons.procedures),
+                text: "Add Patient",
+              ),
+              Tab(
+                icon: Icon(FontAwesomeIcons.listAlt),
+                text: "Patient List",
+              ),
             ],
+            indicator: UnderlineTabIndicator(
+              borderSide: BorderSide(color: Colors.blue[900], width: 4),
+              insets: EdgeInsets.symmetric(horizontal: 20),
+            ),
           ),
           title: Text('Patients'),
         ),
@@ -44,8 +67,9 @@ class PatientState extends State<Patients> {
                       children: <Widget>[
                         CustomTextField("Patient Name", "John Doe"),
                         CustomTextField("NIC or Passport", "xxxxxxxxxx"),
-                        CustomTextField("Date of birth", "YYYY-MM-DD"),
+                        DateTimePicker(),
                         CustomTextField("Phone", "07xxxxxxxx"),
+                        CustomTextField("Address", "12/B, Street, City"),
                         Row(
                           children: <Widget>[
                             Expanded(
@@ -106,7 +130,8 @@ class PatientState extends State<Patients> {
                                     margin: EdgeInsets.only(
                                         left: 12.0, right: 10.0),
                                     child: DropdownButton<String>(
-                                      items: bloodtypes.map((String dropdownItem) {
+                                      items:
+                                          bloodtypes.map((String dropdownItem) {
                                         return DropdownMenuItem<String>(
                                           value: dropdownItem,
                                           child: Text(dropdownItem),
@@ -126,7 +151,18 @@ class PatientState extends State<Patients> {
                             ),
                           ],
                         ),
-
+                        Material(
+                          child: Container(
+                            child: RaisedButton(
+                              color: Colors.deepOrange,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8.0))),
+                              child: Text("Save"),
+                              onPressed: () {},
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ),
