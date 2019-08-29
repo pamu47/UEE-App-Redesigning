@@ -16,14 +16,14 @@ class LoginState extends State<Login> {
     return Scaffold(
         appBar: AppBar(
           title: const Text("Login"),
-          backgroundColor: Colors.redAccent,
+          backgroundColor: Color.fromRGBO(18, 69, 89, 1),
         ),
         drawer: AppDrawer(),
         body: ListView(children: <Widget>[
           Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            color: Colors.blue,
+            color: Colors.white,
             child: Stack(
               children: <Widget>[
                 Material(
