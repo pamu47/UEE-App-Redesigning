@@ -49,6 +49,8 @@ class DateTimeState extends State<DateTimePicker> {
                   border: OutlineInputBorder(),
                   labelText: 'Date of birth',
                 ),
+                style: new TextStyle(
+                fontSize: 20.0, height: 0.6, color: Colors.black)
               ),
             ),
           ),
