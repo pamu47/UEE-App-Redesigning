@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hospital_mgt/Homescreen/dashboard.dart';
+import 'package:hospital_mgt/Departments/deparments.dart';
 import 'package:hospital_mgt/Homescreen/homescreen.dart';
 import 'package:hospital_mgt/PatientMgt/patients.dart';
 class AppDrawer extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
         child: ListView(
-          // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: <Widget>[
             UserAccountsDrawerHeader(
@@ -38,10 +34,9 @@ class AppDrawer extends StatelessWidget{
                 leading: Icon(FontAwesomeIcons.hospital),
                 title: Text('Departments'),
                 onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
-                  Navigator.pop(context);
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Departments()));
+                  //Navigator.pop(context);
                 },
               ),
             ),
