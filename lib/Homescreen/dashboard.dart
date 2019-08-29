@@ -14,12 +14,14 @@ class DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[300],
       body: StaggeredGridView.count(
         crossAxisCount: 2,
         crossAxisSpacing: 12,
         mainAxisSpacing: 12.0,
-        padding: EdgeInsets.all(16.0),
-        //symmetric(horizontal: 16.0, vertical: 8.0)
+
+        padding: EdgeInsets.all(20.0),
+ 
         children: <Widget>[
           myItems(FontAwesomeIcons.userMd, "Doctors", 0xffed622b, () {}),
           myItems(FontAwesomeIcons.procedures, "Patients", 0xff26cb3c, Patients()),
@@ -48,7 +50,7 @@ class DashboardState extends State<Dashboard> {
     return Material(
         color: Colors.white,
         elevation: 14.0,
-        shadowColor: Color(0x802196F3),
+        shadowColor: Colors.black,
         borderRadius: BorderRadius.circular(24.0),
         child: InkWell(
           onTap: () {

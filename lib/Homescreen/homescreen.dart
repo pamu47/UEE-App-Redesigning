@@ -18,6 +18,7 @@ class MyHomePageState extends State<MyApp> {
         appBar: AppBar(
           backgroundColor: Colors.blue,
           title: Text("Dashboard"),
+          backgroundColor: Color.fromRGBO(11, 83, 81,1),
         ),
         body: Dashboard(),
         drawer: AppDrawer());
