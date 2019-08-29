@@ -16,7 +16,7 @@ class MyHomePageState extends State<MyApp> {
     return Scaffold(
         appBar: AppBar(
           title: Text("Dashboard"),
-          backgroundColor: Color.fromRGBO(11, 83, 81,1),
+          backgroundColor: Color.fromRGBO(18,69,89,1),
         ),
         body: Dashboard(),
         drawer: AppDrawer());

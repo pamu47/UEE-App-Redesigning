@@ -14,7 +14,6 @@ class DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[300],
       body: StaggeredGridView.count(
         crossAxisCount: 2,
         crossAxisSpacing: 12,
@@ -46,7 +45,7 @@ class DashboardState extends State<Dashboard> {
 
   Material myItems(IconData icon, String heading, int color, method) {
     return Material(
-        color: Colors.white,
+        color: Colors.grey[200],
         elevation: 14.0,
         shadowColor: Colors.black,
         borderRadius: BorderRadius.circular(24.0),

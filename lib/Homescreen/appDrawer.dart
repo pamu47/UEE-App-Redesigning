@@ -23,9 +23,7 @@ class AppDrawer extends StatelessWidget{
                 leading: Icon(Icons.dashboard),
                 title: Text('Dashboard'),
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MyApp()));
-                  //Navigator.pop(context);
+                  Navigator.pop(context);
                 },
               ),
             ),
@@ -34,9 +32,10 @@ class AppDrawer extends StatelessWidget{
                 leading: Icon(FontAwesomeIcons.hospital),
                 title: Text('Departments'),
                 onTap: () {
+                  Navigator.pop(context);
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Departments()));
-                  //Navigator.pop(context);
+                  
                 },
               ),
             ),
