@@ -28,15 +28,15 @@ class CustomCardState extends State<CustomCard> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         onTap: () {
-           Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PatientDetails()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => PatientDetails(paramID)));
         },
         trailing: ButtonTheme(
           padding: EdgeInsets.only(left: 50),
           minWidth: 20.0,
           buttonColor: Colors.transparent,
-          child: RaisedButton(
-            elevation: 0,
+          child: FlatButton(
+            highlightColor: Colors.transparent,
             child: Icon(
               FontAwesomeIcons.trashAlt,
               color: Colors.red[800],
@@ -66,7 +66,9 @@ class CustomCardState extends State<CustomCard> {
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(8.0))),
                                     child: Text("Cancel"),
-                                    onPressed: () {Navigator.pop(context);},
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
                                   ),
                                   RaisedButton(
                                     color: Colors.red[700],

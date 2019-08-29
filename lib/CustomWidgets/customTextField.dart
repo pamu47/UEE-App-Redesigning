@@ -30,7 +30,7 @@ class CustomTextFieldState extends State<CustomTextField> {
               labelText: labelText,
             ),
             style: new TextStyle(
-                fontSize: 20.0, height: 0.6, color: Colors.black)
+                fontSize: 15.0, height: 0.6, color: Colors.black)
                 
                 ),
       ),
