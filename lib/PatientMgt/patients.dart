@@ -16,6 +16,7 @@ class PatientState extends State<Patients> {
   var currentItemSelected = 'Gender';
   @override
   Widget build(BuildContext context) {
+
     return DefaultTabController(
       length: 2,
       child: Scaffold(

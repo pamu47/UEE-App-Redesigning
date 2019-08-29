@@ -19,7 +19,9 @@ class DashboardState extends State<Dashboard> {
         crossAxisCount: 2,
         crossAxisSpacing: 12,
         mainAxisSpacing: 12.0,
+
         padding: EdgeInsets.all(20.0),
+ 
         children: <Widget>[
           myItems(FontAwesomeIcons.userMd, "Doctors", 0xffed622b, () {}),
           myItems(FontAwesomeIcons.procedures, "Patients", 0xff26cb3c, Patients()),
