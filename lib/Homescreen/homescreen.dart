@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hospital_mgt/Homescreen/appDrawer.dart';
-import 'package:hospital_mgt/PatientMgt/patients.dart';
-
 import 'dashboard.dart';
 
 class MyApp extends StatefulWidget {
