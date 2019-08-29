@@ -33,9 +33,8 @@ class PatientState extends State<Patients> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(18,69,89,1),
+          backgroundColor: Color.fromRGBO(18, 69, 89, 1),
           bottom: TabBar(
             tabs: [
               Tab(
@@ -68,7 +67,7 @@ class PatientState extends State<Patients> {
                       padding: EdgeInsets.all(8.0),
                       children: <Widget>[
                         Padding(
-                          padding: const EdgeInsets.only(top:20.0),
+                          padding: const EdgeInsets.only(top: 20.0),
                           child: CustomTextField("Patient Name", "John Doe"),
                         ),
                         CustomTextField("NIC or Passport", "xxxxxxxxxx"),
@@ -164,7 +163,43 @@ class PatientState extends State<Patients> {
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(8.0))),
                               child: Text("Save"),
-                              onPressed: () {},
+                              onPressed: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return AlertDialog(
+                                          title: Text("Success!"),
+                                          content: Container(
+                                            height: 120,
+                                            child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: <Widget>[
+                                                Container(
+                                                    alignment: Alignment.center,
+                                                    child: Text(
+                                                        "Patient Successfully added")),
+                                                ButtonTheme(
+                                                  minWidth: 200.0,
+                                                  child: RaisedButton(
+                                                    color: Colors.green,
+                                                    shape: RoundedRectangleBorder(
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius.circular(
+                                                                    8.0))),
+                                                    child: Text("Done"),
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ));
+                                    });
+                              },
                             ),
                           ),
                         )
@@ -181,14 +216,13 @@ class PatientState extends State<Patients> {
               padding: EdgeInsets.all(3.0),
               child: ListView(
                 children: <Widget>[
-                  CustomCard("001","Patient"),
-                  CustomCard("002","Patient"),
-                  CustomCard("003","Patient"),
-                  CustomCard("004","Patient"),
-                  CustomCard("005","Patient"),
-                  CustomCard("006","Patient"),
-                  CustomCard("007","Patient"),
-                  
+                  CustomCard("001", "Patient"),
+                  CustomCard("002", "Patient"),
+                  CustomCard("003", "Patient"),
+                  CustomCard("004", "Patient"),
+                  CustomCard("005", "Patient"),
+                  CustomCard("006", "Patient"),
+                  CustomCard("007", "Patient"),
                 ],
               ),
             )
