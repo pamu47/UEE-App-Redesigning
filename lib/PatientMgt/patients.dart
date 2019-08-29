@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hospital_mgt/CustomWidgets/card.dart';
 import 'package:hospital_mgt/CustomWidgets/customTextField.dart';
 import 'package:hospital_mgt/CustomWidgets/datetimePicker.dart';
 
@@ -32,8 +33,9 @@ class PatientState extends State<Patients> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        
         appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Color.fromRGBO(18,69,89,1),
           bottom: TabBar(
             tabs: [
               Tab(
@@ -56,16 +58,19 @@ class PatientState extends State<Patients> {
           children: [
             Center(
               child: Padding(
-                padding: EdgeInsets.all(20.0),
+                padding: EdgeInsets.all(10.0),
                 child: Card(
                   elevation: 8,
                   child: new Container(
-                    width: 400,
+                    width: 450,
                     //padding: new EdgeInsets.all(120.0),
                     child: new ListView(
                       padding: EdgeInsets.all(8.0),
                       children: <Widget>[
-                        CustomTextField("Patient Name", "John Doe"),
+                        Padding(
+                          padding: const EdgeInsets.only(top:20.0),
+                          child: CustomTextField("Patient Name", "John Doe"),
+                        ),
                         CustomTextField("NIC or Passport", "xxxxxxxxxx"),
                         DateTimePicker(),
                         CustomTextField("Phone", "07xxxxxxxx"),
@@ -154,7 +159,7 @@ class PatientState extends State<Patients> {
                         Material(
                           child: Container(
                             child: RaisedButton(
-                              color: Colors.deepOrange,
+                              color: Colors.green,
                               shape: RoundedRectangleBorder(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(8.0))),
@@ -169,7 +174,24 @@ class PatientState extends State<Patients> {
                 ),
               ),
             ),
-            Icon(Icons.directions_transit),
+
+            //2nd Tab. PATIENTS LIST
+
+            Container(
+              padding: EdgeInsets.all(3.0),
+              child: ListView(
+                children: <Widget>[
+                  CustomCard("001","Patient"),
+                  CustomCard("002","Patient"),
+                  CustomCard("003","Patient"),
+                  CustomCard("004","Patient"),
+                  CustomCard("005","Patient"),
+                  CustomCard("006","Patient"),
+                  CustomCard("007","Patient"),
+                  
+                ],
+              ),
+            )
           ],
         ),
       ),
