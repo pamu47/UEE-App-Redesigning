@@ -15,8 +15,9 @@ class MyHomePageState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.blue,
           title: Text("Dashboard"),
-          backgroundColor: Color.fromRGBO(18,69,89,1),
+          //backgroundColor: Color.fromRGBO(18,69,89,1),
         ),
         body: Dashboard(),
         drawer: AppDrawer());
