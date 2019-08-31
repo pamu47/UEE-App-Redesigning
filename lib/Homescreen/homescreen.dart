@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hospital_mgt/Homescreen/appDrawer.dart';
-
 import 'dashboard.dart';
 
 class MyApp extends StatefulWidget {
@@ -18,7 +17,7 @@ class MyHomePageState extends State<MyApp> {
         appBar: AppBar(
           backgroundColor: Colors.blue,
           title: Text("Dashboard"),
-          backgroundColor: Color.fromRGBO(11, 83, 81,1),
+          //backgroundColor: Color.fromRGBO(18,69,89,1),
         ),
         body: Dashboard(),
         drawer: AppDrawer());

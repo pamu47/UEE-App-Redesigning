@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatefulWidget {
-  String label, hint;
+  final String label, hint;
 
   CustomTextField(this.label, this.hint);
 
@@ -24,12 +24,15 @@ class CustomTextFieldState extends State<CustomTextField> {
         borderRadius: BorderRadius.circular(5.0),
         elevation: 5.0,
         child: TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            hintText: hintText,
-            labelText: labelText,
-          ),
-        ),
+            decoration: InputDecoration(contentPadding: EdgeInsets.only(top:40,left: 15,bottom: 2.0),
+              border: OutlineInputBorder(),
+              hintText: hintText,
+              labelText: labelText,
+            ),
+            style: new TextStyle(
+                fontSize: 15.0, height: 0.6, color: Colors.black)
+                
+                ),
       ),
     );
   }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hospital_mgt/Departments/deparments.dart';
+import 'package:hospital_mgt/FinanceMgt/payroll.dart';
 import 'package:hospital_mgt/PatientMgt/patients.dart';
 
 class Dashboard extends StatefulWidget {
@@ -14,7 +16,6 @@ class DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[300],
       body: StaggeredGridView.count(
         crossAxisCount: 2,
         crossAxisSpacing: 12,
@@ -26,8 +27,8 @@ class DashboardState extends State<Dashboard> {
           myItems(FontAwesomeIcons.userMd, "Doctors", 0xffed622b, () {}),
           myItems(FontAwesomeIcons.procedures, "Patients", 0xff26cb3c, Patients()),
           myItems(Icons.notifications, "Noticeboard", 0xffff3266, () {}),
-          myItems(Icons.message, "Messages", 0xff3399fe, () {}),
-          myItems(Icons.payment, "Payments", 0xfff4c83f, () {}),
+          myItems(FontAwesomeIcons.hospital, "Departments", 0xff3399fe, Departments()),
+          myItems(FontAwesomeIcons.fileInvoiceDollar, "Payroll", 0xfff4c83f, Payroll()),
           myItems(FontAwesomeIcons.pills, "Medicine", 0xff622F74, () {}),
           //myItems(Icons.favorite, "Followers", 0xffad61f1, () {}),
           //myItems(Icons.message, "Messages", 0xff7297ff, () {}),
@@ -48,7 +49,7 @@ class DashboardState extends State<Dashboard> {
 
   Material myItems(IconData icon, String heading, int color, method) {
     return Material(
-        color: Colors.white,
+        color: Colors.grey[200],
         elevation: 14.0,
         shadowColor: Colors.black,
         borderRadius: BorderRadius.circular(24.0),
