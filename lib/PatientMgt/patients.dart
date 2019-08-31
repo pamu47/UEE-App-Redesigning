@@ -72,7 +72,7 @@ class PatientState extends State<Patients> {
                           child: CustomTextField("Patient Name", "John Doe"),
                         ),
                         CustomTextField("NIC or Passport", "xxxxxxxxxx"),
-                        DateTimePicker(),
+                        DateTimePicker("Date of birth"),
                         CustomTextField("Phone", "07xxxxxxxx"),
                         CustomTextField("Address", "12/B, Street, City"),
                         Row(
