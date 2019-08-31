@@ -3,6 +3,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hospital_mgt/Departments/deparments.dart';
 import 'package:hospital_mgt/FinanceMgt/payroll.dart';
+import 'package:hospital_mgt/NoticeMgt/testCalendar.dart';
 import 'package:hospital_mgt/PatientMgt/patients.dart';
 
 class Dashboard extends StatefulWidget {
@@ -26,7 +27,7 @@ class DashboardState extends State<Dashboard> {
         children: <Widget>[
           myItems(FontAwesomeIcons.userMd, "Doctors", 0xffed622b, () {}),
           myItems(FontAwesomeIcons.procedures, "Patients", 0xff26cb3c, Patients()),
-          myItems(Icons.notifications, "Noticeboard", 0xffff3266, () {}),
+          myItems(Icons.notifications, "Noticeboard", 0xffff3266, TestCalendar()),
           myItems(FontAwesomeIcons.hospital, "Departments", 0xff3399fe, Departments()),
           myItems(FontAwesomeIcons.fileInvoiceDollar, "Payroll", 0xfff4c83f, Payroll()),
           myItems(FontAwesomeIcons.pills, "Medicine", 0xff622F74, () {}),

@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:async';
 class DateTimePicker extends StatefulWidget {
+  final String labelText;
+  DateTimePicker(this.labelText);
   @override
   State<StatefulWidget> createState() {
-    return DateTimeState();
+    return DateTimeState(labelText);
   }
 }
 
 class DateTimeState extends State<DateTimePicker> {
+  String labelText;
+  DateTimeState(this.labelText);
   DateTime _date = DateTime.now();
   var dateController = TextEditingController();
 
@@ -47,7 +51,7 @@ class DateTimeState extends State<DateTimePicker> {
                 controller: dateController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Date of birth',
+                  labelText: labelText,
                 ),
                 style: new TextStyle(
                 fontSize: 20.0, height: 0.6, color: Colors.black)
