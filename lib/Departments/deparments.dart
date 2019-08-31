@@ -36,7 +36,7 @@ class DepartmentState extends State<Departments> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Color.fromRGBO(18, 69, 89, 1),
           bottom: TabBar(
             tabs: [
               Tab(
@@ -49,7 +49,7 @@ class DepartmentState extends State<Departments> {
               ),
             ],
             indicator: UnderlineTabIndicator(
-              borderSide: BorderSide(color: Colors.blue[900], width: 4),
+              borderSide: BorderSide(color: Colors.white, width: 4),
               insets: EdgeInsets.symmetric(horizontal: 20),
             ),
           ),
@@ -69,7 +69,7 @@ class DepartmentState extends State<Departments> {
                       padding: EdgeInsets.all(30.0),
                       children: <Widget>[
                         Container(
-                          height: 40,
+                          height: 20,
                         ),
                         CustomTextField("Department Name", "Cardiology/Diagnostic Imaging"),
                         Column(
@@ -128,6 +128,7 @@ class DepartmentState extends State<Departments> {
                         b
                             ? CustomTextField("Number of beds", "25")
                             : Container(),
+                        CustomTextField("Description", "Any special information to keep"),
                         ButtonTheme(
                           minWidth: 200.0,
                           child: RaisedButton(
