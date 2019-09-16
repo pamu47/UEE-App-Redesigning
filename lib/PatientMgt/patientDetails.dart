@@ -18,7 +18,7 @@ class PatientDetailsState extends State<PatientDetails>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Patient Info : Patient "+ paramID),
+        title: Text("More Info : "+ paramID),
       ),
     );
   }
