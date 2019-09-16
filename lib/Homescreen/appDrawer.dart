@@ -3,7 +3,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hospital_mgt/Departments/deparments.dart';
 import 'package:hospital_mgt/FinanceMgt/payroll.dart';
 import 'package:hospital_mgt/Login/profile.dart';
+import 'package:hospital_mgt/Messages/sendMessage.dart';
 import 'package:hospital_mgt/PatientMgt/patients.dart';
+import 'package:hospital_mgt/StaffMgt/StaffDashboard.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -52,10 +54,10 @@ class AppDrawer extends StatelessWidget {
               leading: Icon(FontAwesomeIcons.userNurse),
               title: Text('Staff'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
+
                 Navigator.pop(context);
+                                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => StaffDashboard()));
               },
             ),
           ),
@@ -75,10 +77,10 @@ class AppDrawer extends StatelessWidget {
               leading: Icon(Icons.message),
               title: Text('Messages'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
+
                 Navigator.pop(context);
+                                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MessageDashboard()));
               },
             ),
           ),

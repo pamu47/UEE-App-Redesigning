@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hospital_mgt/CustomWidgets/card.dart';
 import 'package:hospital_mgt/CustomWidgets/customTextField.dart';
 
 class Departments extends StatefulWidget {
@@ -138,7 +139,41 @@ class DepartmentState extends State<Departments> {
                                     BorderRadius.all(Radius.circular(8.0))),
                             child: Text("Done"),
                             onPressed: () {
-                              Navigator.pop(context);
+                              //Navigator.pop(context);
+                              showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return AlertDialog(
+                                        title: Text("Success!"),
+                                        content: Container(
+                                          height: 120,
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: <Widget>[
+                                              Container(
+                                                  alignment: Alignment.center,
+                                                  child: Text(
+                                                      "Department Successfully created")),
+                                              ButtonTheme(
+                                                minWidth: 200.0,
+                                                child: RaisedButton(
+                                                  color: Colors.green,
+                                                  shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.all(
+                                                              Radius.circular(
+                                                                  8.0))),
+                                                  child: Text("Done"),
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ));
+                                  });
                             },
                           ),
                         ),
@@ -148,7 +183,20 @@ class DepartmentState extends State<Departments> {
                 ),
               ),
             ),
-            Icon(Icons.directions_transit),
+            Container(
+              padding: EdgeInsets.all(3.0),
+              child: ListView(
+                children: <Widget>[
+                  CustomCard("Dpt_001", "Department"),
+                  CustomCard("Dpt_002", "Department"),
+                  CustomCard("Dpt_003", "Department"),
+                  CustomCard("Dpt_004", "Department"),
+                  CustomCard("Dpt_005", "Department"),
+                  CustomCard("Dpt_006", "Department"),
+                  CustomCard("Dpt_007", "Department"),
+                ],
+              ),
+            )
           ],
         ),
       ),

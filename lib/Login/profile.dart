@@ -96,6 +96,18 @@ class ProfileState extends State<Profile> {
                       initialValue: "30/08/2019 at 17.30.45",
                     ),
                   ),
+                  ButtonTheme(
+                    minWidth: 200.0,
+                    child: RaisedButton(
+                      color: Colors.green,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                      child: Text("Save"),
+                      onPressed: () {
+                        //Navigator.pop(context);
+                      },
+                    ),
+                  ),
                 ],
               ),
             ],
