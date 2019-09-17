@@ -1,6 +1,6 @@
 # uee_redesigning
 
-A new Flutter project.
+Redesigned user interfaces of Android Application "Hospital Management System" by SARU TECH (https://play.google.com/store/apps/details?id=com.sarutech.hospitalmanager) 
 
 ## Getting Started
 
