@@ -1,15 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:hospital_mgt/Homescreen/homescreen.dart';
 import 'package:hospital_mgt/Login/login.dart';
-import 'package:hospital_mgt/PatientMgt/patients.dart';
+
 
 void main() => runApp(MaterialApp(
-      routes: {
-        '/home': (context)=>MyApp(),
-        '/patients' : (context) =>Patients()
-      },
       theme: ThemeData(),
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
