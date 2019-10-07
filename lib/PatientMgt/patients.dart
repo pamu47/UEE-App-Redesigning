@@ -27,10 +27,17 @@ class PatientState extends State<Patients> {
   var currentBloodtype = 'Blood Type';
   var currentItemSelected = 'Gender';
   var dateController = TextEditingController();
+  String _dropdownError;
+
+  _validateForm() {
+    if (currentItemSelected == 'Gender') {
+      print('blood type not selected');
+      setState(() => _dropdownError = "Please select an option!");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-
     return DefaultTabController(
       length: 2,
       child: Scaffold(
@@ -156,6 +163,12 @@ class PatientState extends State<Patients> {
                             ),
                           ],
                         ),
+                        currentItemSelected != 'Gender'
+                            ? SizedBox.shrink()
+                            : Text(
+                                _dropdownError ?? "",
+                                style: TextStyle(color: Colors.red),
+                              ),
                         Material(
                           child: Container(
                             child: RaisedButton(
@@ -165,41 +178,42 @@ class PatientState extends State<Patients> {
                                       BorderRadius.all(Radius.circular(8.0))),
                               child: Text("Save"),
                               onPressed: () {
-                                showDialog(
-                                    context: context,
-                                    builder: (context) {
-                                      return AlertDialog(
-                                          title: Text("Success!"),
-                                          content: Container(
-                                            height: 120,
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: <Widget>[
-                                                Container(
-                                                    alignment: Alignment.center,
-                                                    child: Text(
-                                                        "Patient Successfully added")),
-                                                ButtonTheme(
-                                                  minWidth: 200.0,
-                                                  child: RaisedButton(
-                                                    color: Colors.green,
-                                                    shape: RoundedRectangleBorder(
-                                                        borderRadius:
-                                                            BorderRadius.all(
-                                                                Radius.circular(
-                                                                    8.0))),
-                                                    child: Text("Done"),
-                                                    onPressed: () {
-                                                      Navigator.pop(context);
-                                                    },
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ));
-                                    });
+                                _validateForm();
+                                // showDialog(
+                                //     context: context,
+                                //     builder: (context) {
+                                //       return AlertDialog(
+                                //           title: Text("Success!"),
+                                //           content: Container(
+                                //             height: 120,
+                                //             child: Column(
+                                //               mainAxisAlignment:
+                                //                   MainAxisAlignment
+                                //                       .spaceBetween,
+                                //               children: <Widget>[
+                                //                 Container(
+                                //                     alignment: Alignment.center,
+                                //                     child: Text(
+                                //                         "Patient Successfully added")),
+                                //                 ButtonTheme(
+                                //                   minWidth: 200.0,
+                                //                   child: RaisedButton(
+                                //                     color: Colors.green,
+                                //                     shape: RoundedRectangleBorder(
+                                //                         borderRadius:
+                                //                             BorderRadius.all(
+                                //                                 Radius.circular(
+                                //                                     8.0))),
+                                //                     child: Text("Done"),
+                                //                     onPressed: () {
+                                //                       Navigator.pop(context);
+                                //                     },
+                                //                   ),
+                                //                 ),
+                                //               ],
+                                //             ),
+                                //           ));
+                                //     });
                               },
                             ),
                           ),
