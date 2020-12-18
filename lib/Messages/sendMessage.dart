@@ -33,13 +33,6 @@ class MessageDashboardState extends State<MessageDashboard> {
           myItems(FontAwesomeIcons.pen, "Compose", 0xffad61f1, NewMessage()),
           myItems(FontAwesomeIcons.inbox, "Inbox", 0xff7297ff, Patients()),
           myItems(FontAwesomeIcons.paperPlane, "Sent", 0xff7297ff, Patients()),
-
-//          myItems(Icons.person, "Add Phar", 0xffff3266, () {}),
-//          myItems(FontAwesomeIcons.car, "Add Drivers", 0xff3399fe, Drivers()),
-//          myItems(FontAwesomeIcons.fileInvoiceDollar, "Add Acct", 0xfff4c83f, Payroll()),
-//          myItems(FontAwesomeIcons.pills, "Add Recept", 0xff622F74, () {}),
-          //myItems(Icons.favorite, "Followers", 0xffad61f1, () {}),
-          //myItems(Icons.message, "Messages", 0xff7297ff, () {}),
         ],
         staggeredTiles: [
           StaggeredTile.extent(2, 130.0),
@@ -48,8 +41,7 @@ class MessageDashboardState extends State<MessageDashboard> {
           StaggeredTile.extent(1, 130.0),
           StaggeredTile.extent(1, 150.0),
           StaggeredTile.extent(1, 130.0),
-          //StaggeredTile.extent(2, 200.0),
-          //StaggeredTile.extent(2, 120.0),
+
         ],
       ),
     );
